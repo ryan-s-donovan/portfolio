@@ -25,7 +25,7 @@ Minor - Real Estate
 <hr>
 
 ## Jobs and Internships
-<i>See my [Resume](/Ryan_Donovan_Resume.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
+<i>See my [Resume](portfolio/Ryan_Donovan_Resume.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
