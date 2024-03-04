@@ -18,15 +18,13 @@ Minor - Real Estate
 </table>
 
 [<img src="https://user-images.githubusercontent.com/91146906/152291436-225cf6f7-2fb4-4c9c-b6bd-96a5010d3db7.svg" height="35"/>](/DanielsDistinctionPortfolio/#top)
-[<img src="https://user-images.githubusercontent.com/91146906/163692713-13e3fdac-bef7-47f0-85d3-6c98086204cf.svg" height="35"/>](https://www.youtube.com/watch?v=Wo9jiR-w170)
-
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
 <a name="profExp"></a>
 <hr>
 
 ## Jobs and Internships
-<i>See my [resume](/RyanDonovanResume.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
+<i>See my [Resume](/Ryan_Donovan_Resume.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
