@@ -1,6 +1,7 @@
 <a name="top"></a>
 <hr>
 
+# **Ryan Donovan Personal Portfolio**
 ## Welcome! This is a little about me and a sampling of my work.
 [<img src="https://user-images.githubusercontent.com/91146906/162140860-bfb69654-5603-49bd-a7a1-a836ab1c772c.svg" height="35"/>](#education)
 [<img src="https://user-images.githubusercontent.com/91146906/162140921-207cd392-cfe5-40e6-a84e-0a16e19e405a.svg" height="35"/>](#profExp)
@@ -11,7 +12,7 @@
 
 ## Education
 ### Univeristy of Denver, Daniels College of Business
-Bachelor of Science Business Administration – Business Information and Analytics, June 2022
+Bachelor of Science Business Administration – Business Information and Analytics, June 2022\
 Minor - Real Estate
 
   </tr>
