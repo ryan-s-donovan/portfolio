@@ -26,7 +26,7 @@ Minor - Real Estate
 <hr>
 
 ## Jobs and Internships
-<i>See my [resume](/HannahMcDonaldResume.pdf) and [LinkedIn](https://www.linkedin.com/in/hannah-m-mcdonald/)</i>
+<i>See my [resume](/RyanDonovanResume.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
