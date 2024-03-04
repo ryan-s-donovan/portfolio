@@ -24,7 +24,7 @@ Minor - Real Estate
 <hr>
 
 ## Jobs and Internships
-<i>See my [Resume](/Resume-Ryan-Donovan.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
+<i>See my [Resume](/Ryan_Donovan_Resume.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
@@ -41,40 +41,46 @@ Minor - Real Estate
   <tr>
     <td>
      <ul>
-        <li>SQL</li>
         <li>Visual Basic</li>
-        <li>Python</li>
-        <li>R</li>
         <li>Excel</li>
         <li>Microsoft SQL Server Management Studio</li>
         <li>Microsoft Visual Studio</li>
         <li>Tableau</li>
-       <li>PowerBI</li>
-        <li>Trello</li>
+        <li>PowerBI</li>
+        <li>Microsoft Access</li>
+        <li>JMP</li>
+        <li>Visio</li>
+        <li>R-Studio</li>
+        <li>Cognos</li>
+        <li>VMware</li>
+        <li>Net-App</li>
       </ul>
     </td>
     <td>
      <ul>
+        <li><a href = "https://learn.microsoft.com/en-us/credentials/certifications/mos-word-expert-2019/?practice-assessment-type=certification">Microsoft Office Specialist: Microsoft Word Expert (Office 2019)</li>
+        <li><a href = "https://learn.microsoft.com/en-us/credentials/certifications/mos-powerpoint-2016/?practice-assessment-type=certification">Microsoft Office Specialist: PowerPoint Associate (Office 2019)</li>
+        <li><a href = "https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-2019/?practice-assessment-type=certification">Microsoft Office Specialist: Microsoft Excel Expert (Office 2019)</li>
+      </ul>
+    </td>
   </tr>
   <tr>
-    <th>CliftonStrengths (Fall 2018)</th>
-    <th>Other Skills</th>
+    <th>Coding Languages</th>
+    <th>Performance and Analysis</th>
  </tr>
  <tr>
    <td>
      <ol>
-        <li>Responsibility</li>
-        <li>Learner</li>
-        <li>Discipline</li>
-        <li>Developer</li>
-        <li>Achiever</li>
+        <li>SQL</li>
+        <li>Python</li>
+        <li>R</li>
      </ol>
    </td>
    <td>
      <ul>
-        <li>Teaching</li>
-        <li>Facilitating</li>
-       <li>Problem Solving</li>
+        <li>Data Mining & Warehousing</li>
+        <li>Optimization</li>
+       <li>Text Mining</li>
      </ul>
    </td>
  </tr>
