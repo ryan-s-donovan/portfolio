@@ -7,6 +7,11 @@
 [<img src="https://user-images.githubusercontent.com/91146906/162140921-207cd392-cfe5-40e6-a84e-0a16e19e405a.svg" height="35"/>](#profExp)
 [<img src="https://user-images.githubusercontent.com/91146906/162140965-cf707805-9abd-43f7-8314-4f96794c44dc.svg" height="35"/>](#skills)
 
+<a name="About Me"></a>
+<hr>
+
+## About Me
+I am currently an undergraduate at the University of Denver with an expected graduation date of June 2024. I have spent my educational career studying Business Information and Analytics and Real Estate, cultivating upper-level analytical skills in big data, market research, financial analysis, and marketing. Throughout my time in college, I have exemplified strong leadership and collaboration within teams, with the ability to effectively multitask. My past experiences have helped me become an excellent communicator with a strong willingness to learn and adapt. I possess superior decision-making skills with data driven insight and recommendation. I proudly uphold outstanding academic performance in business, data analysis, and performance analytics.
 <a name="education"></a>
 <hr>
 
@@ -88,3 +93,24 @@ Minor - Real Estate
 </table>
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
+
+<a name="Acheivements"></a>
+<hr>
+<[student-hat-2](https://github.com/ryan-s-donovan/portfolio/assets/159507460/f7415f71-1298-48b9-82a7-dd5474daef8a)>
+
+## Acheivements
+Future Bachelor of Business Administration in Business Information and Analytics June 2024
+
+<a name="Strengths"></a>
+<hr>
+![512px-GAnalytics svg](https://github.com/ryan-s-donovan/portfolio/assets/159507460/b7797674-4f29-4c3f-9b44-fe76f9706f4e)
+
+## Strengths
+Analyzing and solving problems through a systematic, analytical approach with the use of interactive platforms and software
+
+<a name="Goals"></a>
+<hr>
+![student-hat-2](https://github.com/ryan-s-donovan/portfolio/assets/159507460/f32c38ad-d098-4809-b7d7-5b5072d3d55f)
+
+## Goals
+Advancing my professional journey, creating lifelong connections in the process, while doing work that matters
