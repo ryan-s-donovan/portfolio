@@ -12,6 +12,12 @@
 [<img src="https://user-images.githubusercontent.com/91146906/161397633-2e4d30dc-ba35-4fe9-b66d-9c8e91ba0f86.svg" height="35"/>](#PowerPivot)
 [<img src="https://user-images.githubusercontent.com/91146906/161397549-071ca628-25fa-4c34-91d1-78274cafc9b8.svg" height="35"/>](#PowerBI)
 
+<a name="Description"></a>
+<hr>
+
+## Introduction
+The mock company used in this project is Giro. Giro is a bike and snow sports equipment company that operates worldwide. The mock Giro Database was created using SQL to highlight its major core data instreams, such as products, customers, transactions, and store locations. After the database was built, mock data was imported using Mockaroo random data generator. The DataMart was then written in SQL and constructed using Visual Studios. DataMart tables executed the ETL process, pulling data from the Giro Database to the Giro DataMart to ultimately provide the end user a more effective and interactive way to utilize the data.
+
 <a name="ExecutiveSummary"></a>
 <hr>
 
