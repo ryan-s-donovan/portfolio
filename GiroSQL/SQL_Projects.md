@@ -355,7 +355,7 @@ Giro is a sports equipment company that sells a variety of different equipmentâ€
 
 ### Star Schema
 
-<img width="700" alt="GiroDMStarSchema" src="https://user-images.githubusercontent.com/91146906/152288067-6de2031c-267d-4d4c-8cdf-eb1cfff8ddaf.png">
+<img width="700" alt="GiroDMStarSchema" src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/e88a5215-e224-4a44-a95b-45de276003e1">
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
@@ -363,7 +363,7 @@ Giro is a sports equipment company that sells a variety of different equipmentâ€
 <hr>
 	
 ## Build Script
-The Back to Roots data mart build script creates the "BackToRootsDM" data mart if it does not exist, deletes tables if they exist, and creates dimension tables and the fact table with the appropriate attributes and constraints. Due to the logic, the script can be run multiple times without error.
+The Giro data mart build script creates the "GiroDM" data mart if it does not exist, deletes tables if they exist, and creates dimension tables and the fact table with the appropriate attributes and constraints. Due to the logic, the script can be run multiple times without error.
 <br>
 <br>[<img src="https://user-images.githubusercontent.com/91146906/152286999-322b92ed-de1a-46f6-a8ff-9bc08b12f9ca.svg" height="35"/>](../BackToRootsOLAP/BuildBackToRootsDM.sql)
 <br>
