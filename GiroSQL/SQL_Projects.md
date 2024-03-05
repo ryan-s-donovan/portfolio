@@ -375,7 +375,8 @@ The Giro data mart build script creates the "GiroDM" data mart if it does not ex
 ## Extract, Transform, and Load the Data Mart
 Using Visual Studio and SSIS, data is extracted from the Back to Roots OLTP, transformed, and loaded into the data mart.
 
-<img width="494" alt="ETL" src="https://user-images.githubusercontent.com/91146906/152477629-7ca615fb-5f35-420d-90c4-245779f5531c.png">
+<img width="494" alt="ETL" src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/80eb6bf8-5ab3-45a0-ba0e-8f433cea09e5">
+
 
 ### DimDate
 DimDate is loaded using the LoadDimDate.sql SQL query, which was provided.
