@@ -365,7 +365,7 @@ Giro is a sports equipment company that sells a variety of different equipmentâ€
 ## Build Script
 The Giro data mart build script creates the "GiroDM" data mart if it does not exist, deletes tables if they exist, and creates dimension tables and the fact table with the appropriate attributes and constraints. Due to the logic, the script can be run multiple times without error.
 <br>
-<br>[<img src="https://user-images.githubusercontent.com/91146906/152286999-322b92ed-de1a-46f6-a8ff-9bc08b12f9ca.svg" height="35"/>](../BackToRootsOLAP/BuildBackToRootsDM.sql)
+<br>[<img src="https://user-images.githubusercontent.com/91146906/152286999-322b92ed-de1a-46f6-a8ff-9bc08b12f9ca.svg" height="35"/>](../GiroSQL/GIRODMBuild.sql)
 <br>
 <br>[<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 	
