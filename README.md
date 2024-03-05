@@ -34,6 +34,25 @@ Minor - Real Estate
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
+<a name="Professional Experience"></a>
+<hr>
+
+## Experience
+### Real Estate
+
+- Leveraged real estate data analytics to derive comprehensive statistical analyses on residential property prices, focusing on variables such as bedroom and bathroom counts, and geographical location.
+- Identified and strategically recommended high-performing zip codes in the Los Angeles metro area that exhibit significant market growth, displayed within Tableau interactive mapping system.
+- Conducted in-depth data assessments in the real estate investment domain, to discern correlations and extract key investment indicators, contributing to informed decision-making.
+
+### IT Data Analysis
+
+- Trusted with the highest-level of data security clearance, with the responsibility of managing and providing oversight.
+- Generated weekly financial chargeback reports to forecast spendings among clients.
+- Designed dashboards to effectively convey a wide range of IT-related statistics, aiding analysts in identifying points of error, and highlighting critical insights to drive performance improvements.
+- Performed daily database updates to ensure accurate annotation and facilitate chargeback processes.
+
+[<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
+
 <a name="skills"></a>
 <hr>
 
@@ -96,21 +115,26 @@ Minor - Real Estate
 
 <a name="Acheivements"></a>
 <hr>
-<[student-hat-2](https://github.com/ryan-s-donovan/portfolio/assets/159507460/f7415f71-1298-48b9-82a7-dd5474daef8a)>
+<img src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/f7415f71-1298-48b9-82a7-dd5474daef8a" height="250"/>
 
 ## Acheivements
+
 Future Bachelor of Business Administration in Business Information and Analytics June 2024
 
 <a name="Strengths"></a>
 <hr>
-![512px-GAnalytics svg](https://github.com/ryan-s-donovan/portfolio/assets/159507460/b7797674-4f29-4c3f-9b44-fe76f9706f4e)
+<br>
+
+<img src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/b7797674-4f29-4c3f-9b44-fe76f9706f4e" height="250"/>
 
 ## Strengths
 Analyzing and solving problems through a systematic, analytical approach with the use of interactive platforms and software
 
 <a name="Goals"></a>
 <hr>
-![student-hat-2](https://github.com/ryan-s-donovan/portfolio/assets/159507460/f32c38ad-d098-4809-b7d7-5b5072d3d55f)
+<br>
+
+<img src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/8b9a1f2d-636e-4654-9019-e00e92a39e31" height="250"/>
 
 ## Goals
 Advancing my professional journey, creating lifelong connections in the process, while doing work that matters
