@@ -1,9 +1,13 @@
 <a name="top"></a>
 
-<img src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/3a0409c3-f8eb-4324-ad32-88660434498e" alt="Portrait" width="400"/>
+<img src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/70dac388-a6c7-47ef-b2cb-8c901c537dfc" alt="Portrait" width="400"/>
 <hr>
 
 # **Ryan Donovan Personal Portfolio**
+### Contact Information
+#### Phone Number: <span style="font-weight:normal;">(530) 863-6603</span>
+#### Email: <span style="font-weight:normal;">ryan.donovan@du.edu</span>
+
 ## Welcome! This is a little about me and a sampling of my work.
 [<img src="https://user-images.githubusercontent.com/91146906/162140860-bfb69654-5603-49bd-a7a1-a836ab1c772c.svg" height="35"/>](#education)
 [<img src="https://user-images.githubusercontent.com/91146906/162140921-207cd392-cfe5-40e6-a84e-0a16e19e405a.svg" height="35"/>](#profExp)
