@@ -1,4 +1,6 @@
 <a name="top"></a>
+
+<img src="https://github.com/ryan-s-donovan/portfolio/assets/159507460/3a0409c3-f8eb-4324-ad32-88660434498e" alt="Portrait" width="400"/>
 <hr>
 
 # **Ryan Donovan Personal Portfolio**
@@ -30,7 +32,7 @@ Minor - Real Estate
 <hr>
 
 ## Jobs and Internships
-<i>See my [Resume](portfolio/Ryan_Donovan_Resume.pdf) and [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/)</i>
+<i>See my [Resume](portfolio/Ryan_Donovan_Resume.pdf), [LinkedIn](https://www.linkedin.com/in/ryan-s-donovan/) and [Google Sites](https://sites.google.com/view/ryandonovan/home)</i>
 
 [<img src="https://user-images.githubusercontent.com/91146906/152072378-b0168a2d-e85c-47c6-a272-fcfb3f6a44ae.svg" height="35"/>](#top)
 
