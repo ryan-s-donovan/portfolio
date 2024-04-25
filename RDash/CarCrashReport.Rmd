@@ -1,0 +1,365 @@
+---
+title: "Nationwide Car Crash 2019 Report"
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+    source_code: embed
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+#include=FALSE will not include r code in output
+#warning=FALSE will remove any warnings from output
+library(flexdashboard)
+library(tidyverse)
+library(GGally)
+library(caret) #for logistic regression
+library(broom) #for tidy() function
+```
+
+```{r load_data}
+CCREPORT <- read_csv("AccidentReport2019.csv")
+```
+
+Introduction {data-orientation=rows}
+=======================================================================
+
+Row {data-height=250}
+-----------------------------------------------------------------------
+
+### Overview 
+
+For this project, we will follow the DCOVAC process. The process is listed below:
+
+DCOVAC – THE DATA MODELING FRAMEWORK
+
+* DEFINE the Problem
+* COLLECT the Data from Appropriate Sources
+* ORGANIZE the Data Collected
+* VISUALIZE the Data by Developing Charts
+* ANALYZE the data with Appropriate Statistical Methods
+* COMMUNICATE your Results
+
+Row {data-height=650}
+-----------------------------------------------------------------------
+
+### The Problem & Data Collection
+
+#### The Problem
+* ***Problem Description***
+The Car Crash 2019 Data used in this dashboard shows all of the car crash data from 2019 in the United States. We will examine the variables in the dataset to determine what helps to predict the number of injuries in a car crash as well as if there was alcohol involved or not. 
+
+### The Questions
+* ***Aanlysis Questions***
+1. Can the day of the week predict weather or not there was alcohol present in the crash?
+2. Does the number of vehicles predict the number of injuries?
+3. What region has the most crashes?
+4. Which Variables best predict the number of injuries?
+
+#### The Data
+This dataset has 1345 rows and 16 variables. For this analysis, we will ignore the all of the categorical named variables that come with the dataset.
+
+#### Data Sources
+https://www.nhtsa.gov/file-downloads?p=nhtsa/downloads/FARS/
+
+### Description of the Variables in the Dataset
+* ***VARIABLES TO PREDICT WITH:***
+
+* *URBANICITY*: where the accident took place(1=Rural Area, 2=Urban Area)
+* *REGION*: what region the accident took place(1=Northeast, 2=Midwest, 3=South, 4=West)
+* *VE_TOTAL*: total number of vehichles involved in the accident
+* *PEDS*: total number of pedestrians involved in the accident
+* *MONTH*: month of which the accident took place
+* *DAY_WEEK*: day of the week the accident took place(1=Sunday)
+* *HOUR*: hour of the day the accient took place(military time)
+* *MAX_SEV*: the max severity of the injuries(0 = No Apparent Injury, 1 = Possible Injury, 2 = Suspected Minor Injury, 3 = Suspected Serious Injury)
+* *MAN_COLL*: how many people were involved
+* *WRK_ZONE*: was it a work zone or not(0=NO, 1=YES)
+
+* ***VARIABLES WE WANT TO PREDICT***
+
+* *ALCOHOL*: was there alcohol present in the accident(1=YES, 2=NO)
+* *NUM_INJ*: total number of injuries resulting from the accident
+
+Summary Statistics
+=======================================================================
+
+
+Column {data-width=650}
+-------------------------------------------------------------------
+### Summary Statistics
+```{r, cache=TRUE}
+#the cache=TRUE can be removed. This will allow you to rerun your code without it having to run EVERYTHING from scratch every time. If the output seems to not reflect new updates, you can choose Knit, Clear Knitr cache to fix.
+#View data
+#remove RAD due to it being an index so not a real continuous number
+CCREPORT <- select(CCREPORT,-MONTHNAME,-REGIONNAME,-URBANICITYNAME,-DAY_WEEKNAME,-MAX_SEVNAME,-ALCOHOLNAME,-HARM_EVNAME,-YEAR,-HARM_EV)
+summary(CCREPORT)
+```
+
+
+Column {data-width=300}
+Column {data-height=500}
+-----------------------------------------------------------------------
+### Transform Variables
+
+```{r, cache=TRUE}
+CCREPORT <- mutate(CCREPORT,WRK_ZONE=as.factor(WRK_ZONE),
+             URBANICITY=as.factor(URBANICITY),
+             URBANICITY=as.factor(MONTH),
+             URBANICITY=as.factor(DAY_WEEK),
+             URBANICITY=as.factor(HOUR),
+             URBANICITY=as.factor(ALCOHOL),
+             URBANICITY=as.factor(MAX_SEV),
+             URBANICITY=as.factor(WEATHER1NAME),
+             URBANICITY=as.factor(REL_ROADNAME),
+             URBANICITY=as.factor(LGT_CONDNAME))
+```
+#### ALCOHOL (Alcohol Involved?)
+```{r, cache=TRUE}
+tibble::as_tibble(select(CCREPORT,ALCOHOL) %>%
+  table())
+```
+
+#### NUM_INJ (High or Low Median Value)
+
+<!--Instructions to import .jpg or .png images
+use getwd() to see current path structure 
+copy file into same place as .Rmd file
+put the path to this file in the link
+format: ![Alt text](book.jpg) -->
+
+![](NumInjDist.png)
+
+
+Data Viz #1
+=======================================================================
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+### Response Variables
+#### ALCOHOL YES(1)/NO(2)
+```{r, cache=TRUE}
+as_tibble(select(CCREPORT,ALCOHOL) %>%
+         table()) %>%
+  ggplot(aes(y=n,x=ALCOHOL)) + geom_bar(stat="identity")
+```
+
+We can see we have about 93% of the data as no alcohol involved in the accident. Looking at the potential predictors related to  ALCOHOL, the strongest relationships are between REGION, MAX_SEV, VE_TOTAL, and NUM_INJ.
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Transform Variables
+
+```{r, cache=TRUE}
+ggpairs(select(CCREPORT,ALCOHOL,NUM_INJ,REGION,URBANICITY,VE_TOTAL,PEDS,MONTH))
+```
+
+
+Data Viz #2
+=======================================================================
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+### Response Variables
+
+#### MEDV
+```{r, cache=TRUE}
+ggplot(CCREPORT, aes(x = NUM_INJ)) +
+  geom_bar()
+```
+
+We see the largest concentration of values around 0-1 injuries. Looking at the potential predictors related to MEDV, the strongest relationships occur between PEDS, MAX_SEV, and VE_TOTAL. The data is also skewed to the left. We can see a large number of values around 0-2 injuries because there is usually none or only a few injuries in a car accident.
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Transform Variables
+```{r, cache=TRUE}
+ggpairs(select(CCREPORT,ALCOHOL,NUM_INJ,DAY_WEEK,HOUR,MAX_SEV,MAN_COLL))
+```
+
+
+NUM_INJ Analysis {data-orientation=rows}
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+
+### Predict Number of Injuries
+For this analysis we will use a Linear Regression Model.
+
+```{r, include=FALSE, cache=TRUE}
+#the include=FALSE hides the output - remove to see
+NUM_INJ_lm <- lm(NUM_INJ ~ . -ALCOHOL,data = CCREPORT)
+summary(NUM_INJ_lm)
+```
+
+```{r, include=FALSE, cache=TRUE}
+#the include=FALSE hides the output - remove to see
+tidy(NUM_INJ_lm)
+```
+
+### Adjusted R-Squared
+
+```{r, cache=TRUE}
+ARSq<-round(summary(NUM_INJ_lm)$adj.r.squared,2)
+valueBox(paste(ARSq*100,'%'), icon = "fa-thumbs-up")
+```
+
+### RMSE
+
+```{r, cache=TRUE}
+Sig<-round(summary(NUM_INJ_lm)$sigma,2)
+valueBox(Sig, icon = "fa-thumbs-up")
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Regression Output
+
+```{r,include=FALSE, cache=TRUE}
+#knitr::kable(summary(NUM_INJ_lm)$coef, digits = 3) #pretty table output
+summary(NUM_INJ_lm)$coef
+```
+
+```{r, cache=TRUE}
+# this version sorts the p-values (it is using an index to reorder the coefficients)
+idx <- order(coef(summary(NUM_INJ_lm))[,4])  
+out <- coef(summary(NUM_INJ_lm))[idx,] 
+knitr::kable(out, digits = 3) #pretty table output
+```
+
+### Residual Assumptions Explorations
+
+```{r, cache=TRUE}
+plot(NUM_INJ_lm, which=c(1,2)) #which tells which plots to show (1-6 different plots)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Analysis Summary
+After examining this model, we determine that there are some predictors that are not important in predicting the number of injuries, so a pruned version of the model is created by removing predictors that are not significant.
+
+Row
+-----------------------------------------------------------------------
+
+### Predict total number of injuries Final Version
+For this analysis we will use a pruned Linear Regression Model. We removed URBANICITY, PEDS, MONTH, DAY_WEEK, HOUR, WRK_ZONE, and REL_ROADNAME.
+
+```{r, include=FALSE, cache=TRUE}
+#the include=FALSE hides the output - remove to see
+NUM_INJ_lm <- lm(NUM_INJ ~ . -ALCOHOL -URBANICITY -PEDS -MONTH -DAY_WEEK -HOUR -WRK_ZONE - REL_ROADNAME -LGT_CONDNAME,data = CCREPORT)
+summary(NUM_INJ_lm)
+```
+
+```{r, include=FALSE, cache=TRUE}
+#the include=FALSE hides the output - remove to see
+tidy(NUM_INJ_lm)
+```
+
+### Adjusted R-Squared
+
+```{r, cache=TRUE}
+ARSq<-round(summary(NUM_INJ_lm)$adj.r.squared,2)
+valueBox(paste(ARSq*100,'%'), icon = "fa-thumbs-up")
+```
+
+### RMSE
+
+```{r, cache=TRUE}
+Sig<-round(summary(NUM_INJ_lm)$sigma,2)
+valueBox(Sig, icon = "fa-thumbs-up")
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Regression Output
+
+```{r, include=FALSE, cache=TRUE}
+knitr::kable(summary(NUM_INJ_lm)$coef, digits = 3) #pretty table output
+```
+
+```{r, cache=TRUE}
+# this version sorts the p-values (it is using an index to reorder the coefficients)
+idx <- order(coef(summary(NUM_INJ_lm))[,4])  
+out <- coef(summary(NUM_INJ_lm))[idx,] 
+knitr::kable(out, digits = 3) #pretty table output
+```
+
+### Residual Assumptions Explorations
+
+```{r, cache=TRUE}
+plot(NUM_INJ_lm, which=c(1,2)) #which tells which plots to show (1-6 different plots)
+```
+
+
+Row
+-----------------------------------------------------------------------
+
+### Analysis Summary
+After examining this model, looking at the residual plots we can see that there are some issues with our data. The residual vs. fitted plot seems to have a lot of patterns in it which mean that the model is unable to capture all the systematic variations within the data.There also seems to be outliers at the top of the residual plot. The Q-Q residual plot is pretty curved and only fall on the line near the middle of the plots, with the beggining and ends curving away from the line.This means that the residuals deviate from the expected normal deviation, resulting in lighter and heavier than predicted normality.
+
+Reducing the predictors that did not help with prediction of the number of injuries resulting form a car crash and did not have a big impact our fit statistics (R-square and RMSE (root mean squared error)).
+
+
+
+
+
+
+
+ALCOHOL Analysis {data-orientation=rows}
+=======================================================================
+
+Row {data-height=900}
+
+-----------------------------------------------------------------------
+
+### Predict Alcohol involvness
+![](ALCOHOL.png)
+   
+### Regression Tree
+![](RegressionTree.png)
+
+
+
+### Neural Nets
+![](Neural.png)
+
+### Bootstrap Forest
+![](BootStrap.png)
+
+Row 
+-------------------------------------
+    
+### Regression/ Estimation Model Comparison
+![](RegressionModelComparison.png)
+* ***Overall*** *
+
+As we can see from the model comparison that the best model to use for predicting if there was alcohol involved in the crash or not is the neural network  regression. This has an over high r-squared compared to the other models as well as a low RMSE when compared to the others. Although these numbers are not very high in accuracy and low in error, it is the best out of the 4 models we are comparing. 
+
+Conclusion
+=======================================================================
+### Summary
+
+
+In Conclusion, we can see that our predictors do not help very well to predict whether or not alcohol was involved in the car accident as well as the number of injuries resulting from the car accident.
+
+**Can the day of the week predict weather or not there was alcohol present in the crash?**
+The day of the week has influence on weather or not there was alcohol involved. Saturday and Sunday have the most number of car crashes with alcohol involved. This makes sense because drinking occurs most primarily on the weekends compared to the weekdays.
+
+**Does the number of vehicles predict the number of injuries?**
+We can see that there is a higher number of injuries predicted when there is more number of vehicles involved in the crash.
+
+**What region has the most crashes?**
+We can see that the South (MD, DE, DC, WV, VA, KY, TN, NC, SC, GA, FL, AL, MS, LA, AR, OK, TX) has the most number of crashes at about 60% of the total and about 6.3% being alcohol related crashes.
+
+**Which Variables best predict the number of injuries?**
+We can see that the best predictors to use while predicting the total number of injuries involved were the number of vehicles, the max severity of the injuries, and the region of which the car accident took place.
+
