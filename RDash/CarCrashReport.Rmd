@@ -49,7 +49,7 @@ Row {data-height=650}
 The Car Crash 2019 Data used in this dashboard shows all of the car crash data from 2019 in the United States. We will examine the variables in the dataset to determine what helps to predict the number of injuries in a car crash as well as if there was alcohol involved or not. 
 
 ### The Questions
-* ***Aanlysis Questions***
+* ***Analysis Questions***
 1. Can the day of the week predict weather or not there was alcohol present in the crash?
 2. Does the number of vehicles predict the number of injuries?
 3. What region has the most crashes?
